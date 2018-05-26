@@ -1,0 +1,11 @@
+.hdr-ctr{
+    position: relative;
+    top: 0px;
+    background-color: blue;
+    width: 100%;
+    clear: both;
+}
+.hdr{
+    color:white;
+    text-align: center;
+}

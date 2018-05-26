@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="col-md-4 mgn-auto">
+    <form #testForm="ngForm" (ngSubmit)="loginFormSubmit(testForm)">
+      <div class="form-group">
+        <label for="name">Username</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="usrName" #name="ngModel" name="name" minlength="2" required>
+        <div *ngIf="name.invalid && formClick" class="alert alert-danger lgn-err">Invalid name</div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password</label>
+        <input type="password" class="form-control" id="pwd" [(ngModel)]="pwd" name="pwd" required>
+      </div>
+      <div class="alert alert-danger lgn-err" *ngIf="invalidData">Invalid username or password</div>
+      <button type="submit" value="submit" class="btn btn-success">Submit</button>
+    </form>
+    <a href="/register">Register here</a>
+  </div>
+  </div>

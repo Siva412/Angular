@@ -1,0 +1,23 @@
+{
+	"productList": [{
+			"productName": "Mobile one",
+			"productPrice": "500",
+			"productDesc": "test one"
+		},
+		{
+			"productName": "Mobile two",
+			"productPrice": "200",
+			"productDesc": "test two"
+		},
+		{
+			"productName": "Mobile three",
+			"productPrice": "600",
+			"productDesc": "test three"
+		},
+		{
+			"productName": "Mobile four",
+			"productPrice": "700",
+			"productDesc": "test four"
+		}
+	]
+}

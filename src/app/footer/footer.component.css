@@ -1,0 +1,9 @@
+.ftr{
+    position: fixed;
+    background-color: blue;
+    width: 100%;
+    bottom: 0;
+}
+.ftr-ct{
+    color: white;
+}

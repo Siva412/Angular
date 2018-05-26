@@ -1,0 +1,4 @@
+<div class="container">
+    <div>Items added:{{this.addedProdList.length}}</div>
+    <app-product *ngFor="let product of prodList" [product]="product" (prodEvent)="prodAdded($event)"></app-product>
+</div>
