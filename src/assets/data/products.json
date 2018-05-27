@@ -2,22 +2,26 @@
 	"productList": [{
 			"productName": "Mobile one",
 			"productPrice": "500",
-			"productDesc": "test one"
+			"productDesc": "test one",
+			"imgUrl":"./assets/images/camera.png"
 		},
 		{
 			"productName": "Mobile two",
 			"productPrice": "200",
-			"productDesc": "test two"
+			"productDesc": "test two",
+			"imgUrl":"./assets/images/headphones.jpg"
 		},
 		{
 			"productName": "Mobile three",
 			"productPrice": "600",
-			"productDesc": "test three"
+			"productDesc": "test three",
+			"imgUrl":"./assets/images/mobile.png"
 		},
 		{
 			"productName": "Mobile four",
 			"productPrice": "700",
-			"productDesc": "test four"
+			"productDesc": "test four",
+			"imgUrl":"./assets/images/camera.png"
 		}
 	]
 }

@@ -3,24 +3,31 @@
     <div class="form-group col-md-6">
       <label>First name</label>
       <input type="text" class="form-control" name="firstName" formControlName="firstName">
-      <div *ngIf="firstName.touched && firstName.invalid" class="text-danger">Please enter Name</div>
+      <div *ngIf="(firstName.pristine && onSubmit) || firstName.touched && firstName.invalid" class="text-danger">Please enter Name</div>
     </div>
     <div class="form-group col-md-6">
       <label>Last name</label>
       <input type="text" class="form-control" name="lastName" formControlName="lastName">
-      <div *ngIf="lastName.touched && lastName.invalid" class="text-danger">Please enter Name</div>
+      <div *ngIf="(lastName.pristine && onSubmit) || lastName.touched && lastName.invalid" class="text-danger">Please enter Name</div>
     </div>
     <div class="form-group col-md-6">
       <label>Mobile number</label>
       <input type="text" class="form-control" name="mobile" formControlName="mobile">
-      <div *ngIf="mobile.touched && mobile.errors && mobile.errors.required" class="text-danger">Please enter mobile</div>
+      <div *ngIf="(mobile.pristine && onSubmit) || mobile.touched && mobile.errors && mobile.errors.required" class="text-danger">Please enter mobile</div>
       <div *ngIf="mobile.touched && mobile.errors && mobile.errors.pattern" class="text-danger">Please enter valid mobile</div>
     </div>
     <div class="form-group col-md-6">
       <label>email</label>
       <input type="text" class="form-control" name="email" formControlName="email">
-      <div *ngIf="email.touched && email.invalid" class="text-danger">Please enter email</div>
+      <div *ngIf="(email.pristine && onSubmit) || email.touched && email.invalid" class="text-danger">Please enter email</div>
     </div>
+    <div class="form-group col-md-6">
+        <label>Country</label>
+        <select class="form-control" name="country" formControlName="country">
+          <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+        </select>
+        <div *ngIf="(country.pristine && onSubmit) || country.touched && country.invalid" class="text-danger">Please select</div>
+      </div>
     <div class="col-md-12">
       <input class="btn btn-success" type="submit" value="Register">
       <button class="btn btn-default" type="reset" value="Reset">Reset</button>

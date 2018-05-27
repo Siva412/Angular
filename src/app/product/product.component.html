@@ -1,17 +1,23 @@
 <div class="prod-cnt">
-  <div class="col-md-6 prod-block">
-    <div>
-      <span>Name</span>
-      <span>{{product.productName}}</span>
-    </div>
-    <div>
-        <span>Price</span>
-        <span>{{product.productPrice}}</span>
+  
+  <div class="row col-md-6 prod-block">
+      <div class="col-md-6">
+          <img [src]="product.imgUrl">
+        </div>
+    <div class="col-md-6">
+      <div>
+        <span>Name</span>
+        <span>{{product.productName}}</span>
+      </div>
+        <div>
+          <span>Price</span>
+          <span>{{product.productPrice}}</span>
       </div>
       <div>
           <span>Description</span>
           <span>{{product.productDesc}}</span>
       </div>
+    </div>
       <button class="btn btn-success" (click)="addItem(product)">Add to cart</button>
   </div>
 </div>

@@ -14,23 +14,28 @@ export class RegistrationComponent implements OnInit {
   lastName : FormControl;
   mobile : FormControl;
   email : FormControl;
+  country: FormControl;
+  countries:string[];
+  onSubmit:boolean=false;
   constructor(public route: Router) { }
   createFormControls = () => {
     this.firstName = new FormControl('', Validators.required);
     this.lastName = new FormControl('', Validators.required);
     this.mobile = new FormControl('', [Validators.required, Validators.pattern('[6-9]{1}[0-9]{9}')]);
     this.email = new FormControl('', Validators.required);
+    this.country = new FormControl('', Validators.required);
   }
   createFormgroup = () => {
     this.myForm = new FormGroup({
       firstName : this.firstName,
       lastName : this.lastName,
       mobile : this.mobile,
-      email : this.email
+      email : this.email,
+      country : this.country
     })
   }
   regSubmit = (data) => {
-    //console.log(data);
+    this.onSubmit=true;
     if(data.valid){
       this.route.navigate(['home']);
     }
@@ -38,6 +43,7 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
     this.createFormControls();
     this.createFormgroup();
+    this.countries = ["India","US","Russia"];
   }
 
 }
